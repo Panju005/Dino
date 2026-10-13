@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beautifully crafted endless runner dino game with neon aesthetics. Jump over obstacles, collect points, and beat your high score!">
+  <title>Neon Dino Run – Endless Runner Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Header HUD -->
+    <header id="hud">
+      <div id="score-display">
+        <span class="hud-label">SCORE</span>
+        <span id="score" class="hud-value">0</span>
+      </div>
+      <div id="highscore-display">
+        <span class="hud-label">BEST</span>
+        <span id="highscore" class="hud-value">0</span>
+      </div>
+    </header>
+
+    <!-- Game Canvas Area -->
+    <main id="game-container">
+      <canvas id="game-canvas"></canvas>
+
+      <!-- Start Screen Overlay -->
+      <div id="start-screen" class="overlay">
+        <div class="overlay-content">
+          <h1 class="game-title">NEON<span class="accent">DINO</span></h1>
+          <p class="subtitle">Endless Runner</p>
+          <div class="dino-art">🦕</div>
+          <button id="start-btn" class="btn-glow">START GAME</button>
+          <p class="hint">or press <kbd>SPACE</kbd> to start</p>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="gameover-screen" class="overlay hidden">
+        <div class="overlay-content">
+          <h2 class="gameover-title">GAME OVER</h2>
+          <div id="final-score-container">
+            <p class="final-label">YOUR SCORE</p>
+            <p id="final-score" class="final-value">0</p>
+          </div>
+          <div id="new-best" class="new-best hidden">✨ NEW BEST! ✨</div>
+          <button id="restart-btn" class="btn-glow">PLAY AGAIN</button>
+          <p class="hint">or press <kbd>SPACE</kbd> to restart</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="game-footer">
+      <p>SPACE / TAP to jump &nbsp;·&nbsp; DOWN to duck</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
